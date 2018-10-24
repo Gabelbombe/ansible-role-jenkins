@@ -9,7 +9,6 @@
   vars:
     packages:
       - python
-      - python2-pip
       - python-jenkins
       - ansible
       - mlocate

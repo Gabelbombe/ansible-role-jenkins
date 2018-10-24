@@ -1,4 +1,6 @@
 ---
 - hosts: all
   roles:
-    - { role: ansible-role-jenkins, become: yes }
+    - { role: geerlingguy.repo-epel,  become: yes }
+    - { role: geerlingguy.jenkins,    become: yes }
+    - { role: ansible-role-jenkins,   become: yes }
