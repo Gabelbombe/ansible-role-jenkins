@@ -17,4 +17,4 @@ in `$WORK_DIR/ansible-role-jenkins/tests`:
 
 in `$WORK_DIR`:
 
-- run ansible-playbook: `ansible-playbook ansible-role-jenkins/tests/test_5_full.yml -i ansible-role-jenkins/tests/inventory`
+- run ansible-playbook: `ansible-playbook ansible-role-jenkins/tests/test_7_default.yml -i ansible-role-jenkins/tests/inventory`

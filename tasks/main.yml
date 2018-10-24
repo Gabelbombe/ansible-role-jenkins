@@ -1,36 +1,31 @@
 ---
-pre_tasks:
-  - name: CA-Certificates update command line execution
-    command: /bin/update-ca-trust
+- name: Restart Jenkins, if necessary
+  meta: flush_handlers
 
-tasks:
-  - name: Restart Jenkins, if necessary
-    meta: flush_handlers
+- name: Install dependencies
+  yum:
+    name: "{{ packages }}"
+    state: latest
+  vars:
+    packages:
+      - python
+      - python2-pip
+      - python-jenkins
+      - ansible
+      - mlocate
+      - tree
+      - git
 
-  - name: Install dependencies
-    yum:
-      name: "{{ packages }}"
-      state: latest
-    vars:
-      packages:
-        - python
-        - python2-pip
-        - python-jenkins
-        - ansible
-        - mlocate
-        - tree
-        - git
+- name: Force upgrade pip
+  pip:
+    name: pip
+    extra_args: --upgrade
 
-  - name: Force upgrade pip
-    pip:
-      name: pip
-      extra_args: --upgrade
-
-  # http://stackoverflow.com/a/34522653/358804
-  - name: Wait for Jenkins to be available
-    uri:
-      url: http://{{ jenkins_hostname }}:{{ jenkins_http_port }}
-    register: result
-    until: result.status == 200
-    retries: 60
-    delay: 1
+# http://stackoverflow.com/a/34522653/358804
+- name: Wait for Jenkins to be available
+  uri:
+    url: http://{{ jenkins_hostname }}:{{ jenkins_http_port }}
+  register: result
+  until: result.status == 200
+  retries: 60
+  delay: 1
