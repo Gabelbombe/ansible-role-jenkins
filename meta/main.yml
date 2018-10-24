@@ -4,7 +4,7 @@ galaxy_info:
   company: GE Healtcare
 
   min_ansible_version: 2.2
-  role_name: datadog
+  role_name: jenkins
 
   license: GPLv3
 
