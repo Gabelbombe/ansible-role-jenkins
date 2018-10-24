@@ -1,12 +1,4 @@
 ---
 - hosts: all
   roles:
-    - { role: ansible-role-jenkikns, become: yes }  # On Ansible < 1.9, use `sudo: yes` instead of `become: yes`
-
-  tasks:
-    - name: Set up pipeline
-      jenkins_job:
-        config: "{{ lookup('file', 'files/job.xml') }}"
-        name: test-auto
-        user: "{{ jenkins_admin_username }}"
-        password: "{{ jenkins_admin_password }}"
+    - { role: ansible-role-jenkins, become: yes }
