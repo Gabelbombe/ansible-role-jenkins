@@ -1,4 +1,12 @@
 ---
+- name: Install required roles
+  include_role:
+    name: "{{ roles }}"
+  vars:
+    roles:
+      - geerlingguy.epel-repo
+      - geerlingguy.jenkins
+
 - name: Restart Jenkins, if necessary
   meta: flush_handlers
 
