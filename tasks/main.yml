@@ -10,7 +10,6 @@
     packages:
       - python
       - python-jenkins
-      - ca-certificates
       - python2-pip
       - ansible
       - mlocate
