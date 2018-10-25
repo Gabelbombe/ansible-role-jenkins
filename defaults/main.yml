@@ -1,2 +1,24 @@
 ---
-# defaults file for jenkins
+# https://github.com/geerlingguy/ansible-role-java#role-variables
+java_packages:
+  - java-1.8.0-openjdk
+
+
+### Plugins ###
+
+# For more information on each plugin, visit
+#
+#   https://plugins.jenkins.io/<ID>
+#
+# Note that removing items from this list won't uninstall them.
+jenkins_plugins:
+  - ansible
+  - ansicolor
+  - blueocean
+  - github
+  - timestamper
+  - workflow-aggregator
+  - ws-cleanup
+
+# Use this variable if you want to append to the recommended `jenkins_plugins` above.
+additional_jenkins_plugins: []

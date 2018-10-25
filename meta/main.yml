@@ -1,7 +1,7 @@
 galaxy_info:
   author: Jd Daniel
-  description: Production-grade Jenkins
-  company: GE Healtcare
+  description: Jenkins installer
+  company: GE Healthcare
 
   min_ansible_version: 2.2
   role_name: jenkins
@@ -21,4 +21,6 @@ galaxy_info:
 
   dependencies:
     - { role: geerlingguy.repo-epel }
-    - { role: geerlingguy.jenkins, jenkins_plugins: [] }
+    - { role: geerlingguy.jenkins,
+        jenkins_plugins: []
+      }
