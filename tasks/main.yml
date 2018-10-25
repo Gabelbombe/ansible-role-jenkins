@@ -10,11 +10,15 @@
     packages:
       - python
       - python-jenkins
-      - python-pip
+      - ca-certificates
+      - python2-pip
       - ansible
       - mlocate
       - tree
       - git
+
+- name: CA-Certificates update command line execution
+  command: /bin/update-ca-trust
 
 - name: Force upgrade pip
   pip:
