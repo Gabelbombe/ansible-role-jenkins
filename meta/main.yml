@@ -48,7 +48,7 @@ galaxy_info:
 dependencies:
   - role: ansiblebit.oracle-java
   - role: geerlingguy.jenkins
-    # use williamyeh.oracle-java instead
+    # use ansiblebit.oracle-java instead
     # https://github.com/geerlingguy/ansible-role-java/issues/42
     java_packages: []
     # handle the plugins ourselves - see `jenkins_plugin` use in tasks
