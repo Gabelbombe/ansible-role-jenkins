@@ -28,7 +28,7 @@
 
 # http://stackoverflow.com/a/34522653
 - name: Wait until Jenkins web interface is available
-  wait_for: "host={{ jenkins_hostname }} port={{ jenkins_port }} state=present delay=5 timeout=300"
+  wait_for: "host={{ jenkins_hostname }} port={{ jenkins_http_port }} state=present delay=5 timeout=300"
 
 - name: Wait until Jenkins web interface is ready
   command: 'curl -s -o /dev/null -w "%{http_code}" http://{{ jenkins_hostname }}:{{ jenkins_http_port}}/cli/'
