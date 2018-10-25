@@ -1,8 +1,0 @@
----
-- src: https://github.com/geerlingguy/ansible-role-repo-epel
-  version: a7f7705
-  name: geerlingguy.repo-epel
-
-- src: https://github.com/geerlingguy/ansible-role-jenkins
-  version: 162a22b
-  name: geerlingguy.jenkins
