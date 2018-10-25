@@ -1,6 +1,6 @@
 ---
 - name: Install required roles
-  include_role:
+  include:
     name: "{{ roles }}"
   vars:
     roles:
