@@ -46,8 +46,7 @@ galaxy_info:
     - cd
 
 dependencies:
-  - role: williamyeh.oracle-java
-    java_remove_download: false
+  - role: ansiblebit.oracle-java
   - role: geerlingguy.jenkins
     # use williamyeh.oracle-java instead
     # https://github.com/geerlingguy/ansible-role-java/issues/42
