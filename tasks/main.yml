@@ -1,11 +1,11 @@
 ---
 - name: Install required roles
-  include:
+  imnport_role:
     name: "{{ roles }}"
   vars:
     roles:
-      - roles/geerlingguy.epel-repo
-      - roles/geerlingguy.jenkins
+      - geerlingguy.epel-repo
+      - geerlingguy.jenkins
 
 - name: Restart Jenkins, if necessary
   meta: flush_handlers
