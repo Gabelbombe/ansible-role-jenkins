@@ -20,5 +20,5 @@ galaxy_info:
     - cd
 
   dependencies:
-    - { role: roles/geerlingguy.repo-epel }
-    - { role: roles/geerlingguy.jenkins, jenkins_plugins: [] }
+    - { role: geerlingguy.repo-epel }
+    - { role: geerlingguy.jenkins, jenkins_plugins: [] }
