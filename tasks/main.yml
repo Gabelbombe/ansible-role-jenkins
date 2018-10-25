@@ -17,6 +17,7 @@
       - tree
       - git
 
+# need latest versions for installing Jenkins plugins - otherwise get a certificate error
 - name: CA-Certificates update command line execution
   command: /bin/update-ca-trust
 
