@@ -1,6 +1,6 @@
 ---
 - name: Install required roles
-  imnport_role:
+  import_role:
     name: "{{ roles }}"
   vars:
     roles:
