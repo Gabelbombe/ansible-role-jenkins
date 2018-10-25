@@ -10,6 +10,7 @@
     packages:
       - python
       - python-jenkins
+      - python-pip
       - ansible
       - mlocate
       - tree
