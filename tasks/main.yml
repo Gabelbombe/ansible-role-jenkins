@@ -1,7 +1,7 @@
 ---
 - name: Install required roles
   include_role:
-    name: "roles/{{ roles }}"
+    name: "{{ roles }}"
   vars:
     roles:
       - geerlingguy.epel-repo
