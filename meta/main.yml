@@ -46,7 +46,7 @@ galaxy_info:
     - cd
 
 dependencies:
-  - role: geerlingguy.jenkins
-    # handle the plugins ourselves - see `jenkins_plugin` use in tasks
+  # handle the plugins ourselves - see `jenkins_plugin` use in tasks
+  - role: geerlingguy.jenkins,d61a7919aaeab1ef7e3618b38164587fc8ba64a4
     jenkins_plugins: []
-  - role: geerlingguy.repo-epel
+  - role: geerlingguy.repo-epel,46055dc44ca5fbe7f22bea512990e7971fa74ddf
