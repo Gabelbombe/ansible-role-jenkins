@@ -11,6 +11,7 @@ jenkins_plugins:
   - ansicolor
   - blueocean
   - github
+  - github-oauth
   - timestamper
   - workflow-aggregator
   - ws-cleanup

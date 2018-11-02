@@ -25,10 +25,14 @@
     name: pip
     extra_args: --upgrade
 
-
 # http://stackoverflow.com/a/34522653
 - name: Wait until Jenkins web interface is available
-  wait_for: "host={{ jenkins_hostname }} port={{ jenkins_http_port }} state=present delay=5 timeout=300"
+  wait_for:
+    host: {{ jenkins_hostname }}
+    port: {{ jenkins_http_port }}
+    state: present
+    timeout: 300
+    delay: 5
 
 - name: Wait until Jenkins web interface is ready
   uri:
